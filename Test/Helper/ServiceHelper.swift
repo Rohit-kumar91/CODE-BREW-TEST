@@ -1,6 +1,7 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 final class ServiceHelper {
     
@@ -82,11 +83,6 @@ final class ServiceHelper {
                 print( "\nfailure:\n failure Response From Server >>>>>>\n\(String(describing: response.result.error))")
                 RappleActivityIndicatorView.stopAnimation()
                 
-                if(response.response?.statusCode == 401){
-                    //Logout the application
-                    UserDefaultValue.removeUserDefault(key: validUser)
-                }
-                
                 if  let errorStr = response.data {
                     let errorJson = JSON(errorStr)
                     if(errorJson != JSON.null){
@@ -98,7 +94,6 @@ final class ServiceHelper {
                         }
                     }else {
                         completion(nil, error.localizedDescription)
-                        
                     }
                 }else {
                     completion(nil, "Error Connecting to Server")
@@ -133,10 +128,6 @@ final class ServiceHelper {
                 RappleActivityIndicatorView.stopAnimation()
                 
                 //Save the cookie for the api login api only...
-                if apiName == SIGN_IN {
-                    self.saveCookies(response: response)
-                }
-                
                 if response.response?.statusCode == 200 {
                     //Ok Response
                     completion(response.result.value as AnyObject?, nil)
@@ -157,10 +148,7 @@ final class ServiceHelper {
                 
             case .failure(let error):
                 RappleActivityIndicatorView.stopAnimation()
-                if(response.response?.statusCode == 401){
-                    //Logout the application
-                    UserDefaultValue.removeUserDefault(key: validUser)
-                }
+
                 
                 if  let errorStr = response.data {
                     let errorJson = JSON(errorStr)
@@ -249,8 +237,9 @@ final class ServiceHelper {
         RappleActivityIndicatorView.startAnimating(attributes: attribute)
     }
 
-    
 }
+
+
     
     
  

@@ -82,8 +82,6 @@ class InitialTableViewController: UITableViewController {
         tableViewCell.setCollectionViewDataSourceDelegate(self, forRow: indexPath.row)
         
     }
-
-
 }
 
 
@@ -139,20 +137,6 @@ extension InitialTableViewController: UICollectionViewDelegate, UICollectionView
         
         if collectionView.tag == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecommendedCollectionViewCell", for: indexPath) as! RecommendedCollectionViewCell
-            
-            cell.backgroundColor = .white
-            cell.contentView.layer.cornerRadius = 4.0
-            cell.contentView.layer.borderWidth = 1.0
-            cell.contentView.layer.borderColor = UIColor.clear.cgColor
-            cell.contentView.layer.masksToBounds = true
-            
-            cell.layer.shadowColor =  #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-            cell.layer.shadowOffset = CGSize(width: 0, height: 1)
-            cell.layer.shadowRadius = 4.0
-            cell.layer.shadowOpacity = 0.2
-            cell.layer.masksToBounds = false
-            cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
-            
 
             if let recommended = data?.recommended?[indexPath.item] {
                 cell.setRecommendedValues(data: recommended)
@@ -165,19 +149,6 @@ extension InitialTableViewController: UICollectionViewDelegate, UICollectionView
         else if collectionView.tag == 1  {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TopDeveloperCollectionViewCell", for: indexPath) as! TopDeveloperCollectionViewCell
             
-            cell.backgroundColor = .white
-            cell.contentView.layer.cornerRadius = 4.0
-            cell.contentView.layer.borderWidth = 1.0
-            cell.contentView.layer.borderColor = UIColor.clear.cgColor
-            cell.contentView.layer.masksToBounds = true
-            
-            cell.layer.shadowColor =  #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-            cell.layer.shadowOffset = CGSize(width: 0, height: 1)
-            cell.layer.shadowRadius = 4.0
-            cell.layer.shadowOpacity = 0.2
-            cell.layer.masksToBounds = false
-            cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
-            
             if let topDeveloper = data?.topDeveloper?[indexPath.item] {
                 cell.setDeveloperData(data: topDeveloper)
             }
@@ -188,18 +159,7 @@ extension InitialTableViewController: UICollectionViewDelegate, UICollectionView
         else if collectionView.tag == 2  {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PreSalesCollectionViewCell", for: indexPath) as! PreSalesCollectionViewCell
             
-            cell.backgroundColor = .white
-            cell.contentView.layer.cornerRadius = 4.0
-            cell.contentView.layer.borderWidth = 1.0
-            cell.contentView.layer.borderColor = UIColor.clear.cgColor
-            cell.contentView.layer.masksToBounds = true
             
-            cell.layer.shadowColor =  #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-            cell.layer.shadowOffset = CGSize(width: 0, height: 1)
-            cell.layer.shadowRadius = 4.0
-            cell.layer.shadowOpacity = 0.2
-            cell.layer.masksToBounds = false
-            cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
             
             if let preSales = data?.preSale?[indexPath.item] {
                 cell.setPreSales(data: preSales)
@@ -211,19 +171,6 @@ extension InitialTableViewController: UICollectionViewDelegate, UICollectionView
         else if collectionView.tag == 3  {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PopularProjectsCollectionViewCell", for: indexPath) as! PopularProjectsCollectionViewCell
             
-            cell.backgroundColor = .white
-            cell.contentView.layer.cornerRadius = 4.0
-            cell.contentView.layer.borderWidth = 1.0
-            cell.contentView.layer.borderColor = UIColor.clear.cgColor
-            cell.contentView.layer.masksToBounds = true
-            
-            cell.layer.shadowColor =  #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-            cell.layer.shadowOffset = CGSize(width: 0, height: 1)
-            cell.layer.shadowRadius = 4.0
-            cell.layer.shadowOpacity = 0.2
-            cell.layer.masksToBounds = false
-            cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
-            
             if let popularProjects = data?.popularProjects?[indexPath.item] {
                 cell.setPopularProjects(data: popularProjects)
             }
@@ -233,21 +180,7 @@ extension InitialTableViewController: UICollectionViewDelegate, UICollectionView
             
         else if collectionView.tag == 4  {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FeatureLocalitiesCollectionViewCell", for: indexPath) as! FeatureLocalitiesCollectionViewCell
-            
-            
-            cell.backgroundColor = .white
-            cell.contentView.layer.cornerRadius = 4.0
-            cell.contentView.layer.borderWidth = 1.0
-            cell.contentView.layer.borderColor = UIColor.clear.cgColor
-            cell.contentView.layer.masksToBounds = true
-            
-            cell.layer.shadowColor =  #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-            cell.layer.shadowOffset = CGSize(width: 0, height: 1)
-            cell.layer.shadowRadius = 4.0
-            cell.layer.shadowOpacity = 0.2
-            cell.layer.masksToBounds = false
-            cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
-            
+        
             if let featureLocalities = data?.featuresLocalities?[indexPath.item] {
                 cell.setFeatureLocalities(data: featureLocalities)
             }

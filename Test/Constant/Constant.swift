@@ -7,3 +7,14 @@
 //
 
 import Foundation
+import UIKit
+
+let APPDELEGATE = UIApplication.shared.delegate as! AppDelegate
+
+
+
+let BASE_URL = "https://apitest.sozu.com/api/"
+let HOME = "user/home"
+let API_SUCCESS = "Success"
+let API_FAIL = "Fail"
+
