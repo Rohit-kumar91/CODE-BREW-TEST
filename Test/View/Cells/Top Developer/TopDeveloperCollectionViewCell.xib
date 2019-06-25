@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TopDeveloperCollectionViewCell" id="gTV-IL-0wX" customClass="TopDeveloperCollectionViewCell" customModule="Test" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="155" height="181"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="155" height="181"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pexels-photo" translatesAutoresizingMaskIntoConstraints="NO" id="Mcn-Tq-Ckg">
+                        <rect key="frame" x="0.0" y="0.0" width="155" height="118"/>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="SaN-NX-fwS">
+                        <rect key="frame" x="7" y="130" width="141" height="41"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="0cM-l1-4Kf">
+                                <rect key="frame" x="0.0" y="0.0" width="141" height="41"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brew" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AqE-Bg-GKc">
+                                        <rect key="frame" x="0.0" y="0.0" width="141" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 12.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBc-Dm-H2z">
+                                        <rect key="frame" x="0.0" y="23.5" width="141" height="17.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="41" id="86M-a2-XE2"/>
+                        </constraints>
+                    </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4Dr-J9-PWR">
+                        <rect key="frame" x="7" y="68" width="138" height="46"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPo-k9-fgs">
+                                <rect key="frame" x="0.0" y="0.0" width="138" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Projects" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I12-jF-zkL">
+                                <rect key="frame" x="0.0" y="25.5" width="138" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Mcn-Tq-Ckg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="5i0-Et-kc8"/>
+                <constraint firstItem="SaN-NX-fwS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="7" id="6dw-fq-DgG"/>
+                <constraint firstAttribute="trailing" secondItem="SaN-NX-fwS" secondAttribute="trailing" constant="7" id="8lF-k5-xx6"/>
+                <constraint firstItem="4Dr-J9-PWR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="7" id="Bh6-Na-agh"/>
+                <constraint firstAttribute="trailing" secondItem="Mcn-Tq-Ckg" secondAttribute="trailing" id="D6U-Yi-Yqn"/>
+                <constraint firstItem="SaN-NX-fwS" firstAttribute="top" secondItem="Mcn-Tq-Ckg" secondAttribute="bottom" constant="12" id="Max-48-bq0"/>
+                <constraint firstItem="Mcn-Tq-Ckg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="RRd-ef-L6T"/>
+                <constraint firstAttribute="trailing" secondItem="4Dr-J9-PWR" secondAttribute="trailing" constant="10" id="ZfW-wb-9oc"/>
+                <constraint firstItem="SaN-NX-fwS" firstAttribute="top" secondItem="4Dr-J9-PWR" secondAttribute="bottom" constant="16" id="wgS-6d-dkQ"/>
+                <constraint firstAttribute="bottom" secondItem="SaN-NX-fwS" secondAttribute="bottom" constant="10" id="zSv-2j-1ds"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="155" height="181"/>
+            <connections>
+                <outlet property="developerImage" destination="Mcn-Tq-Ckg" id="eJw-mO-utx"/>
+                <outlet property="developerName" destination="AqE-Bg-GKc" id="1Rh-Pn-v7R"/>
+                <outlet property="price" destination="JBc-Dm-H2z" id="VhF-yb-H2Q"/>
+                <outlet property="projectCount" destination="RPo-k9-fgs" id="jba-LV-JOr"/>
+                <outlet property="projectTitle" destination="I12-jF-zkL" id="FTI-Uu-n1u"/>
+            </connections>
+            <point key="canvasLocation" x="-275" y="56"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="pexels-photo" width="500" height="333"/>
+    </resources>
+</document>
